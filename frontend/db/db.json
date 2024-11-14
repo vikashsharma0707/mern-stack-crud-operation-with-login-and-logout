@@ -1,0 +1,32 @@
+{
+  "employee": [
+    {
+      "empno": 101,
+      "empname": "jay",
+      "designation": "job",
+      "salary": 1000,
+      "id": "ef23"
+    },
+    {
+      "empno": 102,
+      "empname": "ram",
+      "designation": "job",
+      "salary": 2000,
+      "id": "bb5d"
+    },
+    {
+      "id": "b329",
+      "empno": "12",
+      "empname": "fd",
+      "designation": "d",
+      "salary": "vdv"
+    },
+    {
+      "id": "f169",
+      "empno": "323",
+      "empname": "f",
+      "designation": "fvf",
+      "salary": "bf"
+    }
+  ]
+}
