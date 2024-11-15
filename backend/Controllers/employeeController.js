@@ -1,6 +1,8 @@
 const stuModel = require("../Models/employeeModel");
 
 
+
+
 const empdataSave = async(req,res)=>{
     const {eno,name,designation,salary} = req.body;
 

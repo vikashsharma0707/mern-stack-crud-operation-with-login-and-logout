@@ -37,17 +37,18 @@ const Search=()=>{
     })
     return(
         <>
-          <h1>This search page</h1>
-          Enter Employee Number : <input type="text" placeholder="enter empno"   value={empno} onChange={(e)=>{setempno(e.target.value)}}/>
+          <h4 style={{marginLeft:"100px"}}>This search page</h4>
+           Employee Number : <input type="text" placeholder="enter empno"   value={empno} onChange={(e)=>{setempno(e.target.value)}}
+           style={{width:"250px",height:"30px",borderRadius:"60px",marginTop:"30px"}}/>
           <button onClick={handlesearch}>Search</button>
 
-          <Table striped bordered hover>
+          <Table striped bordered hover style={{width:"40%",marginTop:"30px"}}>
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th>Empno</th>
+          <th>Empname</th>
+          <th>Designation</th>
+          <th>Salary</th>
         </tr>
       </thead>
       <tbody>

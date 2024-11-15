@@ -1,10 +1,15 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Table from 'react-bootstrap/Table';
+import "../css/hello.css"
 
 
 
 const Display=()=>{
+
+  const tab ={
+    color:"blue"
+  }
 
   const [val,setval] = useState([]);
 
@@ -19,11 +24,13 @@ const Display=()=>{
     loaddata();
   },[])
 
-
+let count=0;
   let ans = val.map((key)=>{
+    count++
   return(
     <>
       <tr>
+        <td>{count}</td>
         <td>{key.empno}</td>
         <td>{key.empname}</td>
         <td>{key.designation}</td>
@@ -38,14 +45,15 @@ const Display=()=>{
 
     return(
         <>
-          <h1>This display page</h1>
-          <Table striped bordered hover>
+          <h4 style={{marginLeft:"200px",}}>This display page</h4>
+          <Table striped bordered hover style={{width:"40%",marginTop:"50px"}}>
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th></th>
+          <th>Empno</th>
+          <th>Empname</th>
+          <th>Designation</th>
+          <th>Salary</th>
         </tr>
       </thead>
       <tbody>

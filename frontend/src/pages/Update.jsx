@@ -35,22 +35,24 @@ const Update=()=>{
     navigate(`/edit/${id}`)
   }
 
-  
+  let count=0;
   let ans = val.map((key)=>{
+    count++;
     return(
       <>
         <tr>
+          <td>{count}</td>
           <td>{key.empno}</td>
           <td>{key.empname}</td>
           <td>{key.designation}</td>
           <td>{key.salary}</td>
-          <td>
+          <td style={{display:"flex",justifyContent:"space-evenly"}}>
             <a href="">
-              <button  onClick={()=>{recdel(key._id)}}>Delete</button>
+              <button  onClick={()=>{recdel(key._id)}} style={{backgroundColor:"red",width:"60px"}}>Delete</button>
             </a>
 
             <a href="">
-              <button  onClick={()=>{myedt(key._id)}}>Edit</button>
+              <button  onClick={()=>{myedt(key._id)}} style={{backgroundColor:"blue",width:"60px"}}>Edit</button>           
             </a>
           </td>
 
@@ -63,13 +65,14 @@ const Update=()=>{
     return(
         <>
           <h1>This update page</h1>
-          <Table striped bordered hover>
+          <Table striped bordered hover style={{width:"40%",marginTop:"30px"}}>
       <thead>
         <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
+          <th></th>
+          <th>Empno</th>
+          <th>Empname</th>
+          <th>Designation</th>
+          <th>Salary</th>
         </tr>
       </thead>
       <tbody>

@@ -94,9 +94,10 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { FaHome, FaTv, FaPlusCircle, FaSearch, FaEdit, FaUserPlus, FaSignInAlt, FaSignOutAlt } from "react-icons/fa";
 
 // Import the CSS file
-import "../css/style.css";
+
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
+
 
 
 const Header = () => {
@@ -107,7 +108,7 @@ const Header = () => {
 
   return (
     <>
-      <Offcanvas show={show} onHide={handleClose} className="offcanvas" placement="start">
+      <Offcanvas show={show} onHide={handleClose} className="hello" style={{width:"250px"}}>
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
